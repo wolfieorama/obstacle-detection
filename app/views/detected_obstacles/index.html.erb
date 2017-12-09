@@ -14,7 +14,7 @@
   <tbody>
     <% @detected_obstacles.each do |detected_obstacle| %>
       <tr>
-        <td><%= detected_obstacle.time %></td>
+        <td><%= detected_obstacle.timestamps %></td>
         <td><%= detected_obstacle.distance %></td>
         <td><%= link_to 'Show', detected_obstacle %></td>
         <td><%= link_to 'Edit', edit_detected_obstacle_path(detected_obstacle) %></td>
