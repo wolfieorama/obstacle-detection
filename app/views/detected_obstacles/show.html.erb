@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @detected_obstacle.time %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @detected_obstacle.distance %>
+</p>
+
+<%= link_to 'Edit', edit_detected_obstacle_path(@detected_obstacle) %> |
+<%= link_to 'Back', detected_obstacles_path %>

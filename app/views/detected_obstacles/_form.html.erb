@@ -1,0 +1,27 @@
+<%= form_with(model: detected_obstacle, local: true) do |form| %>
+  <% if detected_obstacle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(detected_obstacle.errors.count, "error") %> prohibited this detected_obstacle from being saved:</h2>
+
+      <ul>
+      <% detected_obstacle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.datetime_select :time, id: :detected_obstacle_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distance %>
+    <%= form.number_field :distance, id: :detected_obstacle_distance %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detected Obstacles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Distance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detected_obstacles.each do |detected_obstacle| %>
+      <tr>
+        <td><%= detected_obstacle.time %></td>
+        <td><%= detected_obstacle.distance %></td>
+        <td><%= link_to 'Show', detected_obstacle %></td>
+        <td><%= link_to 'Edit', edit_detected_obstacle_path(detected_obstacle) %></td>
+        <td><%= link_to 'Destroy', detected_obstacle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detected Obstacle', new_detected_obstacle_path %>
