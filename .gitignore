@@ -18,6 +18,7 @@
 !/tmp/.keep
 
 /node_modules
+/send_data.py
 /yarn-error.log
 
 .byebug_history
