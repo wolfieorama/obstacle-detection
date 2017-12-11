@@ -7,8 +7,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <nav class="navbar navbar-default navbar-top">
+    <div class="container">
+        <nav class="navbar-brand"><%= link_to image_tag('ninja2.png') %></nav>
+        <ul id="user_links" class="nav navbar-nav navbar-right">
+          <li><h3>Navigation made easier</h3></li>
+        </ul>
+        <ul id="login_links" class="nav navbar-nav navbar-left">
+          <li><h3>Park Easy</h3></li>
+        </ul>
+    </div>
+  </nav>
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
