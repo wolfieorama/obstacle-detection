@@ -17,9 +17,9 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>Time</th>
-              <th>Distance in Centimeters</th>
-              <th>Image</th>
+              <th align="center">Time</th>
+              <th align="center">Distance in Centimeters</th>
+              <th align="center">Image</th>
             </tr>
           </thead>
 
@@ -27,8 +27,8 @@
             <% @detected_obstacles.each do |detected_obstacle| %>
               <tr>
                 <td><%= detected_obstacle.timestamps.strftime('%B %d, %Y: %H:%M %Z') || 'Time not Recorded' %></td>
-                <td><%= detected_obstacle.distance || 'Distance not Recorded' %></td>
-                <td><%= 'No Image yet' %></td>
+                <td align="center"><%= detected_obstacle.distance || 'Distance not Recorded' %></td>
+                <td align="center"><%= 'No Image yet' %></td>
               </tr>
             <% end %>
           </tbody>
@@ -40,3 +40,20 @@
       <h3>No Objects detected yet</h3>
     <% end %>
   </div>
+  <!-- count -->
+
+  <div class="col-lg-3">
+   <div class="panel panel-default">
+     <div class="panel-heading">
+       <h4 align="center">Detected Obstacles Count</h4>
+     </div>
+       <div class="panel-body">
+         <h1 align="center"><%= @detected_obstacles.count %></h1>
+       </div>
+      <div class="divider"></div>
+       <div class="panel-footer action">
+         <h5 align="center">Tracking Ninja Count</h5>
+       </div>
+   </div>
+ </div>
+  <!-- count end -->

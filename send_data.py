@@ -15,7 +15,7 @@ data = uuid.uuid4()
 ts = time.time()
 # st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
 with conn:
-    cur.execute("""INSERT INTO detected_obstacles values(data,NOW(),99,NOW(),NOW())""")
+    cur.execute("""INSERT INTO detected_obstacles values(76,NOW(),87,NOW(),NOW())""")
 
 # conn.commit
 conn.close
