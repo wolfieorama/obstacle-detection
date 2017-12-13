@@ -33,6 +33,9 @@
             <% end %>
           </tbody>
         </table>
+        <div class="text-center">
+          <%= will_paginate @detected_obstacles, renderer: BootstrapPagination::Rails %>
+        </div>
       </div>
     </div>
 
