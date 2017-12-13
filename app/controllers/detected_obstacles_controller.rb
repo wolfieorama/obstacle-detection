@@ -4,7 +4,9 @@ class DetectedObstaclesController < ApplicationController
   # GET /detected_obstacles
   # GET /detected_obstacles.json
   def index
-    @detected_obstacles = DetectedObstacle.all.paginate(page: params[:page])
+    @detected_obstacles = DetectedObstacle.all
+                                          .paginate(page: params[:page])
+                                          .order('timestamps DESC')
   end
 
   # GET /detected_obstacles/1
