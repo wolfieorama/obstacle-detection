@@ -10,16 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171209135543) do
+ActiveRecord::Schema.define(version: 20171213172743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "detected_obstacles", force: :cascade do |t|
     t.datetime "timestamps"
-    t.integer "distance"
+    t.string "distance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "testing", id: false, force: :cascade do |t|
+    t.integer "distance"
   end
 
 end
